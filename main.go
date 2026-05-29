@@ -40,6 +40,7 @@ func main() {
 	r := chi.NewRouter()
 
 	// Middlewares globales
+	r.Use(middlewares.CorsMiddleware) // Habilitar CORS para todo el tráfico
 	r.Use(middlewares.Logger)
 
 	// 4. Registrar Rutas y Dependencias de los Módulos
